@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="red">#ff0000</color>
+    <color name="btnpressed">#FF106EE9</color>
+    <color name="btnnormal">#108EE9</color>
+    <color name="btninvalid">#66ccf5</color>
+    <color name="keyborad_line_color">#bfbfbf</color>
+    <color name="bg_keyborad_color_normal">#fff</color>
+    <color name="bg_keyborad_color_press">#bfbfbf</color>
+    <!-- new -->
+    <color name="c_333333">#333333</color>
+
+    <color name="c_d8d3cf">#d8d3cf</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="c_a59a93">#a59a93</color>
+    <color name="black">#000000</color>
+
+    <!--pressed-->
+    <color name="c_b9afa9">#b9afa9</color>
+
+    <color name="c_c35b3a">#c35b3a</color>
+
+    <color name="c_9d472c">#9d472c</color>
+</resources>

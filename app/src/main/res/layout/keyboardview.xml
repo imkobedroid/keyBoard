@@ -1,0 +1,18 @@
+<loan.moerlong.com.customkeyboard.widget.CustomKeyboardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/keyborad_line_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/bg_keyboardview"
+        android:keyPreviewHeight="35dp"
+        android:keyPreviewLayout="@layout/keyboard_key_preview"
+        android:keyPreviewOffset="0dp"
+        android:keyTextColor="#8a8a8a"
+        android:keyTextSize="18sp"
+        android:labelTextSize="18sp"
+        android:paddingTop="0dp"
+        android:shadowColor="#fff"
+        android:shadowRadius="0.0"/>
