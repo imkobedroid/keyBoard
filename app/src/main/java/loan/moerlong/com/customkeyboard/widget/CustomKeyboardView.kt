@@ -13,6 +13,9 @@ import android.util.AttributeSet
 import loan.moerlong.com.customkeyboard.R
 
 
+/**
+ *Created by Dsh
+ */
 class CustomKeyboardView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : KeyboardView(context, attrs, defStyleAttr) {
