@@ -163,7 +163,7 @@ class KeyBoardUtil {
         }
         mKeyBoardView.isEnabled = true
         //设置预览，如果设置false，则就不现实预览效果
-        mKeyBoardView.isPreviewEnabled = true
+        mKeyBoardView.isPreviewEnabled = false
         //设置可见
         mKeyBoardView.visibility = View.VISIBLE
         //指定键盘弹出动画
@@ -209,7 +209,7 @@ class KeyBoardUtil {
             //添加震动效果
             //mActivity.applicationContext.vibrator.vibrate(50)
             ////指定隐藏（确定）删除不显示预览
-            mKeyBoardView.isPreviewEnabled = !(primaryCode == Keyboard.KEYCODE_DONE || primaryCode == Keyboard.KEYCODE_DELETE)
+           // mKeyBoardView.isPreviewEnabled = !(primaryCode == Keyboard.KEYCODE_DONE || primaryCode == Keyboard.KEYCODE_DELETE)
         }
 
         override fun onRelease(primaryCode: Int) {

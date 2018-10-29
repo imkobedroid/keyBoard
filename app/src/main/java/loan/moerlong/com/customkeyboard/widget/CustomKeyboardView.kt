@@ -20,17 +20,30 @@ class CustomKeyboardView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : KeyboardView(context, attrs, defStyleAttr) {
 
+
     private var mKeyBoard: Keyboard? = null
 
     init {
         mKeyBoard = this.keyboard
     }
 
+
+    override fun setBackgroundResource(resid: Int) {
+        super.setBackgroundResource(resid)
+        if (isPressed) {
+            setBackgroundColor(ContextCompat.getColor(context, R.color.black))
+        } else {
+            setBackgroundColor(ContextCompat.getColor(context, R.color.white))
+        }
+    }
+
+
     @SuppressLint("DrawAllocation", "PrivateResource")
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas!!)
         val keyboard = keyboard ?: return
         val keys = keyboard.keys
+
         if (keys != null && keys.size > 0) {
             val paint = Paint()
             paint.textAlign = Paint.Align.CENTER
@@ -39,16 +52,20 @@ class CustomKeyboardView @JvmOverloads constructor(
             paint.isAntiAlias = true
             for (key in keys) {
                 if (key.codes[0] == -4 && key.label == "完成") {
-                    val dr = context.resources.getDrawable(R.drawable.keyboard_yellow)
+                    val dr = ContextCompat.getDrawable(context, R.drawable.keyboard_yellow)
+                    dr!!.setBounds(key.x, key.y, key.x + key.width, key.y + key.height)
+                    dr.draw(canvas)
+                } else if (key.codes[0] != -5) {
+
+                    //设置点击效果
+                    val dr = ContextCompat.getDrawable(context, R.drawable.bg_keyboardview)
+                    val drawableState = key.currentDrawableState
+                    dr!!.state = drawableState
+
                     dr.setBounds(key.x, key.y, key.x + key.width, key.y + key.height)
                     dr.draw(canvas)
-                } else {
-                    if (key.codes[0] != -5) {
-                        val dr = context.resources.getDrawable(R.drawable.keyboard_whilat)
-                        dr.setBounds(key.x, key.y, key.x + key.width, key.y + key.height)
-                        dr.draw(canvas)
-                    }
                 }
+
 
                 if (key.label != null) {
                     if (key.codes[0] == -4) {
@@ -74,4 +91,6 @@ class CustomKeyboardView @JvmOverloads constructor(
             }
         }
     }
+
+
 }
