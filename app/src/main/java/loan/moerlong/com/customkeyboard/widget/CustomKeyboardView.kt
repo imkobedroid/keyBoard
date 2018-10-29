@@ -28,15 +28,6 @@ class CustomKeyboardView @JvmOverloads constructor(
     }
 
 
-    override fun setBackgroundResource(resid: Int) {
-        super.setBackgroundResource(resid)
-        if (isPressed) {
-            setBackgroundColor(ContextCompat.getColor(context, R.color.black))
-        } else {
-            setBackgroundColor(ContextCompat.getColor(context, R.color.white))
-        }
-    }
-
 
     @SuppressLint("DrawAllocation", "PrivateResource")
     override fun onDraw(canvas: Canvas?) {
